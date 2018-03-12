@@ -29,7 +29,6 @@
   $date_past = strtotime($row[0]);
   $time = date("G:i:s");
   $current_date = strtotime($time);
-  // $current_date = strtotime(date('m/d/Y h:i:s a', time()));
   if ($current_date - $date_past  >= 4150 && !empty($buffer)){
     $sql = "DELETE FROM listings";
     if (!mysqli_query($conn, $sql)) {
