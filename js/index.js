@@ -5,7 +5,6 @@ $(document).ready(function() {
     url: "http://localhost:8080/apartmenthunt/php/export.php",
     data: data,
     success: function(data) {
-      // console.log(data);
       for (let x = 0; x < data.length; x++) {
         document.querySelector("tbody.list").innerHTML += `<tr>
             <td> ${data[x].apartmentname} </td>
